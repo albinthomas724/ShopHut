@@ -1,11 +1,12 @@
-
-
+import Footer from "../components/Footer";
 function About() {
   return (
-    <div>
-      <p className="text-blue-700">this is about</p>
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">this is about</main>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

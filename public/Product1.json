@@ -1,0 +1,19 @@
+{
+    "id": "2",
+    "name": "Classic Leather Strap Watch",
+    "description": "A timeless and elegant wristwatch with a classic leather strap. Perfect for both formal and casual occasions. Features a durable stainless steel case and a minimalist dial design.",
+    "price": 120.00,
+    "rating": 4.5,
+    "reviews": 124,
+    "selectedColor": "Brown Leather",
+    "colors": ["red", "#000000", "#FFFFFF"],
+    "selectedSize": "42mm",
+    "sizes": ["38mm", "40mm", "42mm", "44mm"],
+    "images": [
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/a/k/h/-original-imagyxxfk2hgmmgb.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/400/400/xif0q/smartwatch/z/u/j/46-99-bxio2003-bxsm2003-bxsm2001-android-ios-beatxp-yes-original-imagyhzncy5rn24p.jpeg?q=50",
+      "/images/watch3.jpg",
+      "/images/watch4.jpg"
+    ]
+  }
+  

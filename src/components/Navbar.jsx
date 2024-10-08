@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,6 +14,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import shophutlogo from "../assets/shophutlogo.png";
+import { useCart } from "../components/CartContext";
 
 const pages = ["Home", "Cart", "About", "Contact"];
 const settings = ["Profile", "Account", "Logout"];
@@ -23,7 +24,11 @@ function Navbar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [selectedPage, setSelectedPage] = React.useState(pages[0]);
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const navigate = useNavigate(); // Add useNavigate hook
+  const navigate = useNavigate();
+  const location = useLocation(); // Get current location
+
+  const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,7 +47,6 @@ function Navbar() {
     setSelectedPage(page);
     handleCloseNavMenu();
 
-    // Handle navigation based on the selected page
     switch (page) {
       case "Home":
         navigate("/");
@@ -60,6 +64,15 @@ function Navbar() {
         break;
     }
   };
+
+  // Effect to update selectedPage based on current route
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") setSelectedPage("Home");
+    else if (path === "/cart") setSelectedPage("Cart");
+    else if (path === "/about") setSelectedPage("About");
+    else if (path === "/contact") setSelectedPage("Contact");
+  }, [location.pathname]); // Run effect on pathname change
 
   return (
     <>
@@ -129,17 +142,40 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <Button 
+                <Button
                   key={page}
                   onClick={() => handlePageChange(page)}
-                  className={`my-2  ${
+                  className={`my-2 ${
                     selectedPage === page
                       ? "font-bold text-blue-500"
                       : "text-black"
                   }`}
                   sx={{ color: selectedPage === page ? "blue" : "black" }}
                 >
-                  {page}
+                  {page === "Cart" ? (
+                    <>
+                      Cart
+                      {totalItems > 0 && (
+                        <span
+                          style={{
+                            color: "white",
+                            marginLeft: 4,
+                            backgroundColor: "black",
+                            borderRadius: "50%",
+                            width: 20,
+                            height: 20,
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          }}
+                        >
+                          {totalItems}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    page
+                  )}
                 </Button>
               ))}
             </Box>
@@ -169,8 +205,7 @@ function Navbar() {
       </AppBar>
 
       {/* Add spacing below Navbar */}
-      <Box sx={{ marginTop: "90px" }}>
-      </Box>
+      <Box sx={{ marginTop: "90px" }}></Box>
     </>
   );
 }
