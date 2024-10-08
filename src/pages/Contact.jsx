@@ -1,11 +1,13 @@
-
+import Footer from "../components/Footer";
 
 function Contact() {
   return (
-    <div>
-      this is contact
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">this is contact</main>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

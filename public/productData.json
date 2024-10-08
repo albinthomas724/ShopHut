@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 299,
+      "image": "src/assets/shophutElectronics.jpg",
+      "rating": 4.5,
+      "colors": ["SaddleBrown", "Black", "White"],
+      "sizes": ["38mm", "40mm", "42mm", "44mm"]
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799,
+      "image": "src/assets/shophutElectronics.jpg",
+      "rating": 4.3,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 211,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799,
+      "image": "src/assets/shophutlogo.png",
+      "rating": 4.3,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 223,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799,
+      "image": "src/assets/shophutlogo.png",
+      "rating": 4.2,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 242,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799,
+      "image": "src/assets/shophutlogo.png",
+      "rating": 4.1,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 88,
+      "name": "Laptop",
+      "category": "Sports",
+      "price": 799,
+      "image": "src/assets/shophutElectronics.jpg",
+      "rating": 4.0,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 243,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799,
+      "image": "src/assets/shophutlogo.png",
+      "rating": 4.2,
+      "colors": ["Black", "Silver"],
+      "sizes": ["13-inch", "15-inch", "17-inch"]
+    },
+    {
+      "id": 543,
+      "name": "Jeans",
+      "category": "Clothing",
+      "price": 49,
+      "image": "https://via.placeholder.com/150",
+      "rating": 4.7,
+      "colors": ["Navy", "DimGray"],
+      "sizes": ["30", "32", "34", "36"]
+    },
+    {
+      "id": 4,
+      "name": "T-shirt",
+      "category": "Clothing",
+      "price": 19,
+      "image": "https://via.placeholder.com/150",
+      "rating": 4.4,
+      "colors": ["White", "Black", "Red"],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 5,
+      "name": "Novel",
+      "category": "Education",
+      "price": 15,
+      "image": "https://via.placeholder.com/150",
+      "rating": 4.8,
+      "colors": ["White"],
+      "sizes": ["Standard"]
+    }
+  ]
+  

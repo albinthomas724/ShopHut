@@ -1,0 +1,23 @@
+[
+    {
+      "id": "Electronics",
+      "name": "Electronics",
+      "image": "src/assets/shophutElectronics.jpg"
+    },
+    {
+      "id": "Clothing",
+      "name": "Clothing",
+      "image": "src/assets/shophutClothing.jpg"
+    },
+    {
+      "id": "Education",
+      "name": "Education",
+      "image": "src/assets/shophutEducation.jpg"
+    },
+    {
+      "id": "Sports",
+      "name": "Sports",
+      "image": "src/assets/shophutSports.jpg"
+    }
+  ]
+  
